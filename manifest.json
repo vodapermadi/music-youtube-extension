@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Music Ad Blocker Pro",
+  "version": "2.0.0",
+  "description": "Blokir semua iklan khusus di YouTube Music",
+  "permissions": [
+    "storage",
+    "webRequest",
+    "declarativeNetRequest",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://music.youtube.com/*",
+    "*://*.doubleclick.net/*",
+    "*://*.googleadservices.com/*",
+    "*://*.googlesyndication.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules/rules.json"
+      }
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://music.youtube.com/*"],
+      "js": ["content-scripts/youtube-music.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["rules/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

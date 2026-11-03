@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>YouTube Music Ad Blocker</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>🎵 YouTube Music<br />Ad Blocker</h1>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalBlocked">0</div>
+                    <div class="stat-label">Total Iklan Diblokir</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="toggle-item">
+                    <div class="toggle-info">
+                        <div class="toggle-label">🎵 YouTube Music</div>
+                        <div class="toggle-desc">Blokir iklan di YouTube Music</div>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="ytMusicToggle" checked />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="section">
+                <button id="resetStats" class="btn-secondary">Reset Statistik</button>
+                <button id="refreshPage" class="btn-primary">Refresh Halaman</button>
+            </div>
+
+            <div class="footer">
+                <p>🎧 Nikmati musik tanpa gangguan iklan!</p>
+            </div>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>

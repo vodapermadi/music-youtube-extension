@@ -1,0 +1,17 @@
+# File paket ekstensi & arsip (untuk upload ke Chrome Web Store)
+*.zip
+*.crx
+*.pem
+
+# File temporary & cache editor (VS Code, Vim/Neovim)
+.vscode/
+*.swp
+*.swo
+*~
+
+# File sistem OS
+.DS_Store
+Thumbs.db
+
+# hasil generate dari google
+_metadata/
